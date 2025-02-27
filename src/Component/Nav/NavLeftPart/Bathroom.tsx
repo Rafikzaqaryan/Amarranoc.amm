@@ -1,74 +1,62 @@
 import { useFilter } from "../../../FilterContext";
 import { useState } from "react";
 
-export default function Rooms() {
-  const { setRoomFilters } = useFilter();
-  const [selected, setSelected] = useState<number | string | null>(null);
+export default function Bathroom() {
+  const { setBathroomFilters } = useFilter();
+  const [selected, setSelected] = useState<number | "all" | null>(null);
 
-  const handleRoomFilter = (value: any | "all") => {
+  const handleBathroomFilter = (value: number | "all") => {
     setSelected(value);
     if (value === "all") {
-      setRoomFilters([]);
+      setBathroomFilters([]);
     } else {
-      setRoomFilters([value]);
+      setBathroomFilters([value]);
     }
-  };
-
-  const getButtonWidth = (value: number | string): string => {
-    switch (value) {
-      case "all":
-        return "w-[98px]";
-      case 1:
-        return "w-[54px]";
-      case 2:
-        return "w-[54px]";
-      case 3:
-        return "w-[54px]";
-      case 4:
-        return "w-[54px]";
-      case 5:
-        return "w-[54px]";
-      case "6 և ավելի":
-        return "w-[120px]";
-      default:
-        return "w-[54px]";
-    }
-  };
-
-  const buttonStyle = (value: number | string) => {
-    return `${getButtonWidth(
-      value
-    )} h-[50px] border rounded-[40px] border-[#d8d9dc] cursor-pointer ${
-      selected === value
-        ? "bg-black text-white"
-        : "bg-white text-black hover:bg-[#eeee]"
-    }`;
   };
 
   return (
     <div className="pt-[30px]">
-      <h1 className="text-[black]">Սենյակների քանակ</h1>
-      <div className="flex flex-wrap gap-x-3 gap-y-1 pt-[10px] ">
+      <h1 className="text-[black]">Սանհանգույցների քանակ</h1>
+      <div className="flex flex-wrap gap-x-3 gap-y-1  pt-[10px] ">
         <button
-          onClick={() => handleRoomFilter("all")}
-          className={buttonStyle("all")}
+          onClick={() => handleBathroomFilter("all")}
+          className={`w-[98px] h-[50px] border rounded-[40px] border-[#d8d9dc] cursor-pointer ${
+            selected === "all"
+              ? "bg-black text-white"
+              : "bg-white text-black  hover:bg-[#eeee]"
+          }`}
         >
           Բոլորը
         </button>
-        {[1, 2, 3, 4, 5].map((roomCount) => (
-          <button
-            key={roomCount}
-            onClick={() => handleRoomFilter(roomCount)}
-            className={buttonStyle(roomCount)}
-          >
-            {roomCount}
-          </button>
-        ))}
         <button
-          onClick={() => handleRoomFilter("6 և ավելի")}
-          className={buttonStyle("6 և ավելի")}
+          onClick={() => handleBathroomFilter(1)}
+          className={`w-[54px] h-[50px] border rounded-[40px] border-[#d8d9dc] cursor-pointer ${
+            selected === 1
+              ? "bg-black text-white"
+              : "bg-white text-black  hover:bg-[#eeee]"
+          }`}
         >
-          6 և ավելի
+          1
+        </button>
+        <button
+          onClick={() => handleBathroomFilter(2)}
+          className={`w-[54px] h-[50px] border rounded-[40px] border-[#d8d9dc] cursor-pointer ${
+            selected === 2
+              ? "bg-black text-white"
+              : "bg-white text-black  hover:bg-[#eeee]"
+          }`}
+        >
+          2
+        </button>
+        <button
+          onClick={() => handleBathroomFilter(3)}
+          className={`w-[54px] h-[50px] border rounded-[40px] border-[#d8d9dc] cursor-pointer ${
+            selected === 3
+              ? "bg-black text-white"
+              : "bg-white text-black  hover:bg-[#eeee]"
+          }`}
+        >
+          3+
         </button>
       </div>
     </div>
