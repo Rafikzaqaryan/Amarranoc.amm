@@ -1,3 +1,9 @@
+import NavLeftPart from "./NavLeftPart/NavLeftPart";
+
 export default function Nav() {
-  return <div>Nav</div>;
+  return (
+    <div>
+      <NavLeftPart />
+    </div>
+  );
 }
