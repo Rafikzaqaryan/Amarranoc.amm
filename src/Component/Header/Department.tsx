@@ -4,7 +4,7 @@ interface MenuItem {
   label: string;
 }
 export default function Department() {
-  const [active, setActive] = useState<string>();
+  const [active] = useState<string>();
   const menuItems: MenuItem[] = [
     { path: "/", label: "Գլխավոր" },
     { path: "/discount", label: "Զեղչեր" },
