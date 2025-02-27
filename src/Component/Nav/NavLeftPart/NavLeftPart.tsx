@@ -7,13 +7,13 @@ import Rooms from "./Rooms";
 
 export default function NavLeftPart() {
   return (
-    <div>
+    <section className="w-[288px] h-[1847px] pl-[10px] border border-[#d8d9dc] text-[#d2d3d6] rounded-2xl xl:block hidden ">
       <Location />
       <MinMaxFilter />
       <Overnight />
       <Rooms />
       <Bathroom />
       <Pool />
-    </div>
+    </section>
   );
 }
