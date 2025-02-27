@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../Firebase";
 import { doc, getDoc } from "firebase/firestore";
-import Header from "../Components/Header/Header";
+import Header from "../Component/Header/Header";
 import OfferAboutInfo from "./OfferAboutInfo";
 import OferImgs from "./OferImgs";
 import OfferPrice from "./OfferPrice";
-import Footer from "../Components/footer/Footer";
+import Footer from "../Component/footer/Footer";
 import OfferAdvantages from "./OfferAdvantages";
 
 interface Offer {

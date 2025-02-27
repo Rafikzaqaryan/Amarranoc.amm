@@ -1,5 +1,5 @@
 import NavAbout from "./NavAbout";
-import Footer from "../../Components/footer/Footer";
+import Footer from "../Component/footer/Footer";
 import AboutHeader from "./AboutHeader";
 
 export default function AboutAs() {

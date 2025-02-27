@@ -3,7 +3,7 @@ import NavRightPart from "./NavRightPart.tsx/NavRightPart";
 
 export default function Nav() {
   return (
-    <div>
+    <div className=" pt-[20px] flex gap-5 justify-center">
       <NavLeftPart />
       <NavRightPart />
     </div>
