@@ -1,3 +1,9 @@
+import Location from "./Location";
+
 export default function NavLeftPart() {
-  return <div>NavLeftPart</div>;
+  return (
+    <div>
+      <Location />
+    </div>
+  );
 }
