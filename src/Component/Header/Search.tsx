@@ -1,3 +1,4 @@
+import Heart from "./Heart";
 import SignIcon from "./SignIcon";
 
 export default function Search() {
@@ -9,6 +10,7 @@ export default function Search() {
         alt="Globe"
       />
       <SignIcon />
+      <Heart />
 
       <div className="md:block hidden">
         <div className="md:block hidden">
