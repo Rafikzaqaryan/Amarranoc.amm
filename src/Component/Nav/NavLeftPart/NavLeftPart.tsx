@@ -1,3 +1,4 @@
+import Bathroom from "./Bathroom";
 import Location from "./Location";
 import MinMaxFilter from "./MinMaxFilter";
 import Overnight from "./Overnight";
@@ -10,6 +11,7 @@ export default function NavLeftPart() {
       <MinMaxFilter />
       <Overnight />
       <Rooms />
+      <Bathroom />
     </div>
   );
 }
