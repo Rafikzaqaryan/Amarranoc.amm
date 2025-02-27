@@ -4,8 +4,9 @@ import { db } from "../../../Firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 import BookCard from "./BookCard";
-// import Choose from "./Choose";
+
 import { useFilter } from "../../../FilterContext";
+import Choose from "./Choose";
 
 interface Product {
   pool: string;
