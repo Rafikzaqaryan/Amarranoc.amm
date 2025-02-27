@@ -1,3 +1,9 @@
+import Map from "./Map";
+
 export default function NavRightPart() {
-  return <div>NavRightPart</div>;
+  return (
+    <div>
+      <Map />
+    </div>
+  );
 }
