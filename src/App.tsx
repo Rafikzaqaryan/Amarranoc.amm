@@ -4,6 +4,8 @@ import Login from "./Sign/Login";
 import Liked from "./Liked/Liked";
 import Discounts from "./discounts/Discounts";
 import Services from "./Services/Services";
+import AboutAs from "./AboutAs/AboutAs";
+import OfferPage from "./OfferPage/OfferPage";
 
 export default function App() {
   return (
@@ -14,8 +16,8 @@ export default function App() {
         <Route path="/liked" element={<Liked />} />
         <Route path="/discount" element={<Discounts />} />
         <Route path="/services" element={<Services />} />
-        {/*<Route path="/about" element={<AboutAs />} />
-        <Route path="/offer/:id" element={<OfferPage />} />  */}
+        <Route path="/about" element={<AboutAs />} />
+        <Route path="/offer/:id" element={<OfferPage />} />
       </Routes>
     </BrowserRouter>
   );
