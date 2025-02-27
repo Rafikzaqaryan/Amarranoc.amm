@@ -3,7 +3,7 @@ import React, { createContext, useContext, ReactNode, useState } from "react";
 interface FilterContextType {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
-  selectedlocation: string[]; // Change from string to string[]
+  selectedlocation: string[];
   setSelectedlocation: React.Dispatch<React.SetStateAction<string[]>>;
   overnightFilters: string;
   setOvernightFilters: (value: string) => void;
