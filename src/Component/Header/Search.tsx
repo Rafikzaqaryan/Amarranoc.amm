@@ -1,7 +1,9 @@
+import { useFilter } from "../../FilterContext";
 import Heart from "./Heart";
 import SignIcon from "./SignIcon";
 
 export default function Search() {
+  const { searchQuery, setSearchQuery } = useFilter();
   return (
     <div className="flex gap-2 items-center">
       <img
@@ -19,6 +21,8 @@ export default function Search() {
               type="text"
               placeholder="Որոնում"
               className="flex-grow outline-none text-[#dcdddf] bg-inherit "
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
             <img
               src="https://amaranoc.am/images/header/search.svg"
