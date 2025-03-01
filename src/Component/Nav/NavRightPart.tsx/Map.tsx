@@ -56,8 +56,14 @@ export default function Map() {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-[rgb(16,22,35,.2)]  bg-opacity-0.5 z-50">
-          <div className="bg-white p-4 rounded-lg w-[400px]">
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-[rgb(16,22,35,.2)]  bg-opacity-0.5 z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white p-4 rounded-lg w-[400px]"
+            onClick={(e) => e.stopPropagation()}
+          >
             <h1 className="text-xl">Նշեք Ձեր ցանկալի օրերը</h1>
 
             <div className="mt-4">
@@ -71,8 +77,14 @@ export default function Map() {
       )}
 
       {isMapModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-[rgb(16,22,35,.2)]  bg-opacity-0.5 z-50">
-          <div className="bg-white p-4 rounded-lg w-[400px]">
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-[rgb(16,22,35,.2)]  bg-opacity-0.5 z-50"
+          onClick={closeMapModal}
+        >
+          <div
+            className="bg-white p-4 rounded-lg w-[400px]"
+            onClick={(e) => e.stopPropagation()}
+          >
             <h1 className="text-xl">Քարտեզի դիտում</h1>
             <p>Ահա ձեր քարտեզի մոդալը:</p>
             <button onClick={closeMapModal} className="mt-4 px-4 py-2 rounded">

@@ -5,8 +5,8 @@ import { auth } from "../Firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import SignUpWithGoogle from "./SignUpWithGoogle";
 import Input from "./Input";
-import Footer from "../Components/footer/Footer";
-import Header from "../Components/Header/Header";
+import Footer from "../Component/footer/Footer";
+import Header from "../Component/Header/Header";
 
 export default function Register() {
   const nav = useNavigate();
