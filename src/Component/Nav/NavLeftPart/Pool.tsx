@@ -3,7 +3,7 @@ import { useFilter } from "../../../FilterContext";
 
 export default function Pool() {
   const { setPoolFilters } = useFilter();
-  const [activeButton, setActiveButton] = useState<string | null>(null);
+  const [activeButton, setActiveButton] = useState("all");
 
   const handlePoolFilter = (value: string | "all") => {
     if (value === "all") {

@@ -17,6 +17,8 @@ interface FilterContextType {
   setRoomFilters: (rooms: any[]) => void;
   bathroomFilters: any[];
   setBathroomFilters: (bathrooms: number[]) => void;
+  selectedpeople: number[];
+  setSelectedpeople: (people: number[]) => void;
 }
 
 const FilterContext = createContext<FilterContextType | undefined>(undefined);
@@ -32,6 +34,7 @@ export const FilterProvider: React.FC<{ children: ReactNode }> = ({
   const [maxPrice, setMaxPrice] = useState<number | undefined>(undefined);
   const [roomFilters, setRoomFilters] = useState<number[]>([]);
   const [bathroomFilters, setBathroomFilters] = useState<number[]>([]);
+  const [selectedpeople, setSelectedpeople] = useState<number[]>([]);
   const [poolFilters, setPoolFilters] = useState<string>("");
   return (
     <FilterContext.Provider
@@ -52,6 +55,8 @@ export const FilterProvider: React.FC<{ children: ReactNode }> = ({
         setBathroomFilters,
         poolFilters,
         setPoolFilters,
+        selectedpeople,
+        setSelectedpeople,
       }}
     >
       {children}

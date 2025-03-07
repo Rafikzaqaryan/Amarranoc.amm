@@ -153,10 +153,10 @@ export default function Offers() {
       <Choose setClickedChoose={setClickedChoose} />
 
       <div>
-        <h2 className="text-xl font-bold mt-[60px]  [@media(max-width:768px)]:text-center">
+        <h2 className="text-xl font-bold mt-[60px] pl-[20px]  [@media(max-width:768px)]:text-[15px]">
           Լավագույն առաջարկներ
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pl-5 pr-5  gap-3 mt-5">
+        <div className="grid  [@media(max-width:1023px)]:grid-cols-1 lg:grid-cols-3 pl-5 pr-5  gap-3 mt-5">
           {loading ? (
             <p>Loading...</p>
           ) : paginatedBestOffers.length ? (
@@ -181,10 +181,10 @@ export default function Offers() {
       </div>
 
       <div>
-        <h2 className="sm: text-xl font-bold mt-[60px]  [@media(max-width:768px)]:text-center">
+        <h2 className="sm: text-xl font-bold mt-[60px] pl-[20px]  [@media(max-width:768px)]:text-[15px]">
           Սովորական առաջարկներ
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pl-5 pr-5 gap-3 mt-5">
+        <div className="grid  [@media(max-width:1023px)]:grid-cols-1 lg:grid-cols-3 pl-5 pr-5  gap-3 mt-5">
           {loading ? (
             <p>Loading...</p>
           ) : paginatedCommonOffers.length ? (

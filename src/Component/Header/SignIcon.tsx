@@ -7,11 +7,13 @@ export default function SignIcon() {
     navigate("/login");
   };
   return (
-    <img
-      onClick={handleLoginClick}
-      src="https://amaranoc.am/images/header/user.svg"
-      className="w-10 h-10"
-      alt="User"
-    />
+    <>
+      <img
+        onClick={handleLoginClick}
+        src="https://amaranoc.am/images/header/user.svg"
+        className="w-10 h-10 [@media(max-width:1020px)]:hidden"
+        alt="User"
+      />
+    </>
   );
 }

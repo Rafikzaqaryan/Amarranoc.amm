@@ -81,7 +81,7 @@ export default function OfferPage() {
   return (
     <div>
       <Header />
-      <div className="pl-[80px]">
+      <div className="flex justify-center flex-col items-center">
         <div className="pt-[20px]">
           <OfferPrice offer={offer} />
         </div>

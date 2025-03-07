@@ -2,6 +2,13 @@ import { SetStateAction, useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { useFilter } from "../../../FilterContext";
+import { FiX } from "react-icons/fi";
+import Location from "../NavLeftPart/Location";
+import MinMaxFilter from "../NavLeftPart/MinMaxFilter";
+import Overnight from "../NavLeftPart/Overnight";
+import Rooms from "../NavLeftPart/Rooms";
+import Bathroom from "../NavLeftPart/Bathroom";
+import Pool from "../NavLeftPart/Pool";
 
 export default function Map() {
   const { searchQuery, setSearchQuery } = useFilter();
@@ -18,32 +25,68 @@ export default function Map() {
   const handleDateChange = (newDate: SetStateAction<Date>) => {
     setDate(newDate);
   };
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setOpen(!open);
+    document.body.style.overflow = !open ? "hidden" : "auto";
+  };
 
   return (
     <div>
-      <div className="[@media(max-width:596px)]:  flex gap-2 [@media(max-width:768px)]:justify-center">
+      <div className="[@media(max-width:596px)]:  flex gap-2 [@media(max-width:601px)]:justify-center  [@media(min-width:599px)]:justify-start">
+        <button
+          className="w-[160px] h-[45px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center  [@media(min-width:1280px)]:hidden [@media(max-width:600px)]:rounded-[30px] [@media(max-width:639px)]:w-[45px] "
+          onClick={toggleMenu}
+        >
+          <p className="[@media(max-width:639px)]:hidden"> Ֆիլտր</p>
+          {open ? (
+            <FiX />
+          ) : (
+            <img src="https://amaranoc.am/images/filter-icon.svg" />
+          )}
+        </button>
+
+        {open && (
+          <div
+            className="fixed inset-0 bg-black opacity-50 z-10"
+            onClick={toggleMenu}
+          />
+        )}
+
+        <section
+          className={`fixed top-0 left-0 bg-white w-3/4 sm:w-1/2 md:w-1/3 h-full py-24 pl-4 overflow-y-auto transition-transform duration-500 ease-in-out shadow-lg rounded-r-lg z-20 ${
+            open ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <Location />
+          <MinMaxFilter />
+          <Overnight />
+          <Rooms />
+          <Bathroom />
+          <Pool />
+        </section>
+
         <div
-          className="w-[144px] h-[45px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center [@media(max-width:596px)]:w-[45px] "
+          className="w-[144px] h-[45px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center [@media(max-width:639px)]:w-[45px] [@media(max-width:600px)]:hidden "
           onClick={openMapModal}
         >
-          <p className="sm:block hidden">Քարտեզ</p>
+          <p className="sm:block hidden  [@media(max-width:639px)]:hidden">
+            Քարտեզ
+          </p>
           <img
             src="https://amaranoc.am/images/map.svg"
             className="w-[16px] h-[16px]"
           />
         </div>
         <div className="sm:hidden  ">
-          <div className="flex items-center w-auto h-[45px] border border-gray-300 rounded-[40px] px-3 py-2 [@media(max-width:768px)]:w-[50vw]">
+          <div className="flex items-center w-auto h-[45px] border border-gray-300 rounded-[40px] px-3 py-2 [@media(max-width:768px)]:w-[70vw]">
             <input
               type="text"
               placeholder="Որոնում"
               className="flex-grow outline-none text-gray-700 bg-inherit"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <img
-              src="https://amaranoc.am/images/header/search.svg"
-              className="w-[16px] h-[16px]"
             />
           </div>
         </div>

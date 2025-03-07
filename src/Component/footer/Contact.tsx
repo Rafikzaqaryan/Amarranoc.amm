@@ -38,10 +38,10 @@ export default function Contact() {
         Գաղտնիության քաղաքականություն
       </div>
 
-      <div className="pt-[30px] md:pt-[112px] hidden sm:block">
+      <div className="pt-[30px]  hidden sm:block">
         <img
           src="https://amaranoc.am/_next/image?url=%2Fimages%2Ffooter%2Ffooter-background.png&w=1920&q=75"
-          className="w-full "
+          className="w-full h-[160px] "
         />
       </div>
     </div>

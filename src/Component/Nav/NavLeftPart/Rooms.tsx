@@ -3,10 +3,9 @@ import { useState } from "react";
 
 export default function Rooms() {
   const { setRoomFilters } = useFilter();
-  const [selected, setSelected] = useState<number | string | null>(null);
-
+  const [activeFilter, setActiveFilter] = useState("all");
   const handleRoomFilter = (value: any | "all") => {
-    setSelected(value);
+    setActiveFilter(value);
     if (value === "all") {
       setRoomFilters([]);
     } else {
@@ -39,7 +38,7 @@ export default function Rooms() {
     return `${getButtonWidth(
       value
     )} h-[50px] border rounded-[40px] border-[#d8d9dc] cursor-pointer ${
-      selected === value
+      activeFilter === value
         ? "bg-black text-white"
         : "bg-white text-black hover:bg-[#eeee]"
     }`;

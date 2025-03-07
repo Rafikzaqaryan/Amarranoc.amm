@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function Bathroom() {
   const { setBathroomFilters } = useFilter();
-  const [selected, setSelected] = useState<number | "all" | null>(null);
+  const [selected, setSelected] = useState<number | "all" | null>("all");
 
   const handleBathroomFilter = (value: number | "all") => {
     setSelected(value);

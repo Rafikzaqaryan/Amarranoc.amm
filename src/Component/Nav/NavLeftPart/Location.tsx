@@ -74,7 +74,10 @@ export default function Location() {
 
   const sortedCategories = useMemo(() => {
     return categories.map((category, index) => (
-      <label key={index} className="flex items-center gap-2 text-[14px]">
+      <label
+        key={index}
+        className="flex items-center gap-2 text-[14px] text-[#101623b3]"
+      >
         <input
           type="checkbox"
           value={category.location}
