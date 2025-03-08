@@ -48,10 +48,12 @@ export default function ServiceOffers() {
 
   const handleBookClick = (product: Product) => {
     setSelectedProduct(product);
+    document.body.style.overflow = "hidden"; // Disable scroll when modal opens
   };
 
   const closeModal = () => {
     setSelectedProduct(null);
+    document.body.style.overflow = "auto"; // Enable scroll when modal closes
   };
 
   return (
@@ -66,6 +68,7 @@ export default function ServiceOffers() {
               <div
                 key={product.id}
                 className="shadow-lg rounded-lg overflow-hidden"
+                onClick={() => handleBookClick(product)}
               >
                 <img
                   src={product.img}
@@ -89,7 +92,7 @@ export default function ServiceOffers() {
                     </strong>
                   </div>
                   <button
-                    className="w-[104px] h-[34px] border border-[#fb9438] text-[13px]  rounded-3xl hover:bg-[#fb9438] hover:text-white transition"
+                    className="w-[104px] h-[34px] border border-[#fb9438] text-[13px]   rounded-3xl hover:bg-[#fb9438] hover:text-white transition"
                     onClick={() => handleBookClick(product)}
                   >
                     Ամրագրել
@@ -104,24 +107,28 @@ export default function ServiceOffers() {
       </div>
 
       {selectedProduct && (
-        <div className="fixed inset-0 flex items-center justify-center bg-[rgb(16,22,35,.2)]  bg-opacity-0.5 z-50">
-          <div className="bg-white w-[500px] h-[600px] p-6 rounded-lg">
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-[rgb(16,22,35,.2)]  bg-opacity-0.5 z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white w-[500px] h-[600px] p-6 rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex justify-between items-center">
-              <h2 className="text-2xl text-black mb-4">
-                {selectedProduct.text1}
-              </h2>
-              <button className="text-black " onClick={closeModal}>
+              <h2 className="text-2xl text-black ">{selectedProduct.text1}</h2>
+              <button className="text-black" onClick={closeModal}>
                 <IoMdClose />
               </button>
             </div>
 
-            <p className="text-[23px]">{selectedProduct.text2}</p>
-            <div className="flex justify-between mt-[330px] items-center">
+            <p className="text-[23px] mt-[100px]">{selectedProduct.text2}</p>
+            <div className="flex justify-between mt-[230px] items-center">
               <p className="font-bold mt-4  text-gray-700 flex items-center gap-2 text-[20px]">
                 <img src="https://amaranoc.am/images/price.svg" alt="price" />
                 {selectedProduct.price}֏
               </p>
-              <button className="w-[100px] h-[40px] border border-[#fb9438]  text-white rounded-xl bg-[#fb9438]  ">
+              <button className="w-[100px] h-[40px] border border-[#fb9438]  text-white rounded-xl bg-[#fb9438]">
                 Ամրագրել
               </button>
             </div>

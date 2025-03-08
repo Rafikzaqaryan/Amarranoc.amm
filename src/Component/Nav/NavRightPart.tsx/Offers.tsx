@@ -153,9 +153,11 @@ export default function Offers() {
       <Choose setClickedChoose={setClickedChoose} />
 
       <div>
-        <h2 className="text-xl font-bold mt-[60px] pl-[20px]  [@media(max-width:768px)]:text-[15px]">
-          Լավագույն առաջարկներ
-        </h2>
+        <div>
+          <h2 className="text-xl font-bold mt-[60px] pl-[20px]  [@media(max-width:768px)]:text-[15px]">
+            Լավագույն առաջարկներ
+          </h2>
+        </div>
         <div className="grid  [@media(max-width:1023px)]:grid-cols-1 lg:grid-cols-3 pl-5 pr-5  gap-3 mt-5">
           {loading ? (
             <p>Loading...</p>
