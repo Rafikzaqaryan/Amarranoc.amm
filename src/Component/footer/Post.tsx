@@ -1,6 +1,6 @@
 export default function Post() {
   return (
-    <div className="bg-[#101623] bg-[url(https://amaranoc.am/images/footer/home-add-application.png)] bg-no-repeat bg-cover w-100vw h-[586px] py-8 flex justify-center items-center">
+    <div className="bg-[#101623] bg-[url(https://amaranoc.am/images/footer/home-add-application.png)] bg-no-repeat bg-cover w-99vw h-[586px] py-8 flex justify-center items-center">
       <div className="w-[80vw] h-[400px] bg-[#38403e]  border-[#636a68] rounded-[20px] border px-4 py-6 md:py-10 md:px-8 ">
         <div className="text-white flex items-center justify-center gap-4 pt-4">
           <div className="w-[50px] md:w-[300px] h-[1px] bg-white"></div>

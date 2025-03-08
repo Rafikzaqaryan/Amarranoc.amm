@@ -16,11 +16,23 @@ export default function Map() {
   const [isMapModalOpen, setIsMapModalOpen] = useState(false);
   const [date, setDate] = useState(new Date());
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = "auto";
+  };
 
-  const openMapModal = () => setIsMapModalOpen(true);
-  const closeMapModal = () => setIsMapModalOpen(false);
+  const openMapModal = () => {
+    setIsMapModalOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+  const closeMapModal = () => {
+    setIsMapModalOpen(false);
+    document.body.style.overflow = "auto";
+  };
 
   const handleDateChange = (newDate: SetStateAction<Date>) => {
     setDate(newDate);
@@ -34,12 +46,12 @@ export default function Map() {
 
   return (
     <div>
-      <div className="[@media(max-width:596px)]:  flex gap-2 [@media(max-width:601px)]:justify-center  [@media(min-width:599px)]:justify-start">
+      <div className="pl-[25px] pr-[10px] [@media(max-width:596px)]:  flex gap-2 [@media(max-width:601px)]:justify-center  [@media(min-width:599px)]:justify-start">
         <button
-          className="w-[160px] h-[45px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center  [@media(min-width:1280px)]:hidden [@media(max-width:600px)]:rounded-[30px] [@media(max-width:639px)]:w-[45px] "
+          className="w-[160px] h-[45px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center  [@media(min-width:1280px)]:hidden [@media(max-width:611px)]:rounded-[30px] [@media(max-width:601px)]:w-[45px] "
           onClick={toggleMenu}
         >
-          <p className="[@media(max-width:639px)]:hidden"> Ֆիլտր</p>
+          <p className="[@media(max-width:601px)]:hidden"> Ֆիլտր</p>
           {open ? (
             <FiX />
           ) : (
@@ -68,18 +80,16 @@ export default function Map() {
         </section>
 
         <div
-          className="w-[144px] h-[45px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center [@media(max-width:639px)]:w-[45px] [@media(max-width:600px)]:hidden "
+          className="w-[144px] h-[45px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center [@media(max-width:600px)]:w-[45px] [@media(max-width:600px)]:hidden "
           onClick={openMapModal}
         >
-          <p className="sm:block hidden  [@media(max-width:639px)]:hidden">
-            Քարտեզ
-          </p>
+          <p className="[@media(max-width:601px)]:hidden">Քարտեզ</p>
           <img
             src="https://amaranoc.am/images/map.svg"
             className="w-[16px] h-[16px]"
           />
         </div>
-        <div className="sm:hidden  ">
+        <div className=" [@media(min-width:601px)]:hidden  ">
           <div className="flex items-center w-auto h-[45px] border border-gray-300 rounded-[40px] px-3 py-2 [@media(max-width:768px)]:w-[70vw]">
             <input
               type="text"
@@ -104,7 +114,7 @@ export default function Map() {
           onClick={closeModal}
         >
           <div
-            className="bg-white p-4 rounded-lg w-[400px]"
+            className="bg-white p-4 rounded-lg w-[400px] max-h-[80vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <h1 className="text-xl">Նշեք Ձեր ցանկալի օրերը</h1>
@@ -125,7 +135,7 @@ export default function Map() {
           onClick={closeMapModal}
         >
           <div
-            className="bg-white p-4 rounded-lg w-[400px]"
+            className="bg-white p-4 rounded-lg w-[400px] max-h-[80vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <h1 className="text-xl">Քարտեզի դիտում</h1>

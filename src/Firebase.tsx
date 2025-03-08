@@ -34,6 +34,7 @@ interface Offer {
 const BestOffersObj: Offer[] = [];
 
 const CommonOffersObj: Offer[] = [];
+const Service: Offer[] = [];
 
 const offerExists = async (collectionName: string, title: string) => {
   const q = query(collection(db, collectionName), where("title", "==", title));
@@ -69,4 +70,5 @@ const uploadData = async (
 (async () => {
   await uploadData("BestOffers", BestOffersObj);
   await uploadData("CommonOffers", CommonOffersObj);
+  await uploadData("Service", Service);
 })();

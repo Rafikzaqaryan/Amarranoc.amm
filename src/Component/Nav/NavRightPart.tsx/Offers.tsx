@@ -149,7 +149,7 @@ export default function Offers() {
   );
 
   return (
-    <div className="pt-[30px]">
+    <div className="pt-[30px] pl-[20px]">
       <Choose setClickedChoose={setClickedChoose} />
 
       <div>
