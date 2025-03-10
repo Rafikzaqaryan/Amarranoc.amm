@@ -68,7 +68,6 @@ export default function OfferPrice({ offer }: { offer: Offer | null }) {
                 <strong>
                   <span className="text-[24px] text-[#fd993a]">
                     {field.value}
-                    {buttonValue[activeButton ?? 0]}
                   </span>
                 </strong>
               </div>

@@ -78,7 +78,7 @@ export default function Offers() {
           selectedlocation.includes(product.location)) &&
         (!overnightFilters || product.overnight === overnightFilters) &&
         (!roomFilters.length || roomFilters.includes(product.rooms)) &&
-        (!poolFilters || product.pool === poolFilters) &&
+        (!poolFilters || product.pool.includes(poolFilters)) &&
         (!bathroomFilters.length ||
           bathroomFilters.includes(product.bathrooms)) &&
         (!minPrice || product.price >= minPrice) &&
@@ -149,65 +149,63 @@ export default function Offers() {
   );
 
   return (
-    <div className="pt-[30px] pl-[20px]">
-      <Choose setClickedChoose={setClickedChoose} />
-
-      <div>
-        <div>
-          <h2 className="text-xl font-bold mt-[60px] pl-[20px]  [@media(max-width:768px)]:text-[15px]">
-            Լավագույն առաջարկներ
-          </h2>
-        </div>
-        <div className="grid  [@media(max-width:1023px)]:grid-cols-1 lg:grid-cols-3 pl-5 pr-5  gap-3 mt-5">
-          {loading ? (
-            <p>Loading...</p>
-          ) : paginatedBestOffers.length ? (
-            paginatedBestOffers.map((product) => (
-              <BookCard
-                key={product.id}
-                id={product.id}
-                location={product.location}
-                image={product.img}
-                img2={product.img2}
-                img3={product.img3}
-                img4={product.img4}
-                img5={product.img5}
-                price={product.price}
-                people={product.people}
-              />
-            ))
-          ) : (
-            <p>Արդյունքներ չեն գտնվել</p>
-          )}
-        </div>
+    <div>
+      <div className="pt-[30px] pl-[50px] pr-[40px]  [@media(max-width:1300px)]:pl-[80px]">
+        <Choose setClickedChoose={setClickedChoose} />
       </div>
 
-      <div>
-        <h2 className="sm: text-xl font-bold mt-[60px] pl-[20px]  [@media(max-width:768px)]:text-[15px]">
-          Սովորական առաջարկներ
-        </h2>
-        <div className="grid  [@media(max-width:1023px)]:grid-cols-1 lg:grid-cols-3 pl-5 pr-5  gap-3 mt-5">
-          {loading ? (
-            <p>Loading...</p>
-          ) : paginatedCommonOffers.length ? (
-            paginatedCommonOffers.map((product) => (
-              <BookCard
-                key={product.id}
-                id={product.id}
-                location={product.location}
-                image={product.img}
-                price={product.price}
-                people={product.people}
-                img2={product.img2}
-                img3={product.img3}
-                img4={product.img4}
-                img5={product.img5}
-              />
-            ))
-          ) : (
-            <p>Արդյունքներ չեն գտնվել</p>
-          )}
-        </div>
+      <h2 className="text-xl font-bold mt-[10px] pl-[40px] w-[300px] [@media(max-width:1024px)]:pl-[80px]  [@media(max-width:768px)]:text-[15px]">
+        Լավագույն առաջարկներ
+      </h2>
+
+      {/* <div className="grid grid-cols-3 ml-[40px] [@media(max-width:1025px)]:grid-cols-1 mr-[10px] mt-5"> */}
+      <div className="flex flex-wrap gap-[10px]   [@media(max-width:1024px)]:justify-center ">
+        {loading ? (
+          <p>Loading...</p>
+        ) : paginatedBestOffers.length ? (
+          paginatedBestOffers.map((product) => (
+            <BookCard
+              key={product.id}
+              id={product.id}
+              location={product.location}
+              image={product.img}
+              img2={product.img2}
+              img3={product.img3}
+              img4={product.img4}
+              img5={product.img5}
+              price={product.price}
+              people={product.people}
+            />
+          ))
+        ) : (
+          <p>Արդյունքներ չեն գտնվել</p>
+        )}
+      </div>
+
+      <h2 className="sm: text-xl font-bold mt-[60px] pl-[40px] w-[380px] [@media(max-width:1300px)]:pl-[70px] [@media(max-width:768px)]:text-[15px]">
+        Սովորական առաջարկներ
+      </h2>
+      <div className="flex flex-wrap gap-[10px]   [@media(max-width:1024px)]:justify-center ">
+        {loading ? (
+          <p>Loading...</p>
+        ) : paginatedCommonOffers.length ? (
+          paginatedCommonOffers.map((product) => (
+            <BookCard
+              key={product.id}
+              id={product.id}
+              location={product.location}
+              image={product.img}
+              price={product.price}
+              people={product.people}
+              img2={product.img2}
+              img3={product.img3}
+              img4={product.img4}
+              img5={product.img5}
+            />
+          ))
+        ) : (
+          <p>Արդյունքներ չեն գտնվել</p>
+        )}
       </div>
 
       {totalPages > 1 && (

@@ -2,7 +2,7 @@ import { CiLocationOn } from "react-icons/ci";
 
 export default function Contact() {
   return (
-    <div className="w-full h-auto  bg-[#101623]">
+    <div className="w-99,9vw h-auto  bg-[#101623]">
       <div className="text-white text-center text-[20px] md:text-[30px] font-bold">
         Կոնտակտներ
       </div>

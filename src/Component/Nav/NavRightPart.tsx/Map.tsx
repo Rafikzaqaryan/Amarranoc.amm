@@ -46,9 +46,9 @@ export default function Map() {
 
   return (
     <div>
-      <div className="pl-[25px] pr-[10px] [@media(max-width:596px)]:  flex gap-2 [@media(max-width:601px)]:justify-center  [@media(min-width:599px)]:justify-start">
+      <div className="pl-[60px] pr-[10px]  [@media(max-width:1300px)]:pl-[70px] [@media(max-width:596px)]:  flex gap-2  [@media(min-width:1300px)]:justify-start">
         <button
-          className="w-[160px] h-[45px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center  [@media(min-width:1280px)]:hidden [@media(max-width:611px)]:rounded-[30px] [@media(max-width:601px)]:w-[45px] "
+          className="w-[160px] h-[42px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center  [@media(min-width:1300px)]:hidden [@media(max-width:611px)]:rounded-[30px] [@media(max-width:601px)]:w-[45px] "
           onClick={toggleMenu}
         >
           <p className="[@media(max-width:601px)]:hidden"> Ֆիլտր</p>
@@ -80,7 +80,7 @@ export default function Map() {
         </section>
 
         <div
-          className="w-[144px] h-[45px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center [@media(max-width:600px)]:w-[45px] [@media(max-width:600px)]:hidden "
+          className="w-[144px] h-[42px] border border-black rounded-[40px] flex gap-[10px] justify-center items-center [@media(max-width:600px)]:w-[45px] [@media(max-width:600px)]:hidden "
           onClick={openMapModal}
         >
           <p className="[@media(max-width:601px)]:hidden">Քարտեզ</p>
@@ -90,7 +90,7 @@ export default function Map() {
           />
         </div>
         <div className=" [@media(min-width:601px)]:hidden  ">
-          <div className="flex items-center w-auto h-[45px] border border-gray-300 rounded-[40px] px-3 py-2 [@media(max-width:768px)]:w-[70vw]">
+          <div className="flex items-center w-auto h-[42px] border border-gray-300 rounded-[40px] px-3 py-2 [@media(max-width:768px)]:w-[65vw] ">
             <input
               type="text"
               placeholder="Որոնում"

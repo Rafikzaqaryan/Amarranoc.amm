@@ -6,7 +6,10 @@ export default function Heart() {
     navigate("/liked");
   };
   return (
-    <div onClick={handleLikedClick} className="cursor-pointer w-5 h-5 ">
+    <div
+      onClick={handleLikedClick}
+      className="cursor-pointer text-[18px] w-5 h-5 "
+    >
       <CiHeart />
     </div>
   );

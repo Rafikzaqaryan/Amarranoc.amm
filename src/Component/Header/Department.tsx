@@ -16,7 +16,7 @@ export default function Departments() {
     { path: "/", label: "Գլխավոր" },
     { path: "/discount", label: "Զեղչեր" },
     { path: "/services", label: "Ծառայություններ" },
-    { path: "/about", label: "Մերմասին" },
+    { path: "/about", label: "Մեր մասին" },
   ];
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Departments() {
 
   return (
     <div className="[@media(min-width:1301px)]:block hidden">
-      <div className="flex  gap-[40px] text-[16px] text-[#101623]">
+      <div className="flex  gap-[40px] text-[16px] font-medium text-[#101623]">
         {menuItems.map((item) => (
           <div
             key={item.path}

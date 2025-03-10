@@ -59,14 +59,16 @@ export default function RightPart() {
     <div className="flex gap-2 items-center">
       <img
         src="https://amaranoc.am/images/header/globus.svg"
-        className="w-6 h-6"
+        className="w-5 h-5"
         alt="Globus"
       />
-      <SignIcon />
-      <div className="[@media(min-width:801px)]:block hidden">
+      <div className="[@media(min-width:1024px)]:block hidden">
+        <SignIcon />
+      </div>
+      <div className="[@media(min-width:1024px)]:block hidden">
         <Heart />
       </div>
-      <div className="[@media(min-width:801px)]:block hidden">
+      <div className="[@media(min-width:800px)]:block hidden">
         <Search />
       </div>
       <nav className="lg:hidden">
