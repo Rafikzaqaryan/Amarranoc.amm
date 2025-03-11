@@ -6,7 +6,6 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import SignUpWithGoogle from "./SignUpWithGoogle";
 import Input from "./Input";
 import Header from "../Component/Header/Header";
-import Footer from "../Component/footer/Footer";
 
 export default function Login() {
   const nav = useNavigate();
@@ -84,7 +83,6 @@ export default function Login() {
           </p>
         </form>
       </div>
-      <Footer />
     </div>
   );
 }
