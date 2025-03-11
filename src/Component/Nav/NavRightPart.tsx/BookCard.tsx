@@ -224,34 +224,34 @@ export default function BookCard({
   return (
     <div
       //  className="cursor-pointer shadow-md w-full h-[390px] sm:w-72 md:w-[22vw] rounded-lg overflow-hidden pt-[20px]"
-      className="cursor-pointer w-[370px] shadow-md h-[390px] rounded-lg overflow-hidden pt-[20px] [@media(max-width:1024px)]:w-[99.9vw]  [@media(max-width:800px)]:h-[300px] "
+      className="cursor-pointer w-[370px] shadow-md h-[390px] rounded-lg overflow-hidden pt-[20px] [@media(max-width:1149px)]:w-[97vw]  [@media(max-width:800px)]:h-[300px] "
       // className="cursor-pointer shadow-md w-full h-[390px]  md:w-80  [@media(max-width:1024px)]:w-full [@media(max-width:801px)]:w-full  rounded-lg overflow-hidden pt-[20px]"
       onClick={() => navigate(`/offer/${id}`)}
     >
       <Slider {...settings}>
         <img
           src={image}
-          className="w-full h-[220px] sm:h-[250px]  rounded-[10px]  [@media(max-width:1024px)]:w-[99.9vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px] "
+          className="w-full h-[220px] sm:h-[250px]  rounded-[10px]  [@media(max-width:1024px)]:w-[97vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px] "
           alt="offer"
         />
         <img
           src={img2}
-          className="w-full h-[220px]  rounded-[10px] sm:h-[250px]  [@media(max-width:1024px)]:w-[99.9vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px] "
+          className="w-full h-[220px]  rounded-[10px] sm:h-[250px]  [@media(max-width:1024px)]:w-[97vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px] "
           alt="offer"
         />
         <img
           src={img3}
-          className="w-full h-[220px]  rounded-[10px] sm:h-[250px]  [@media(max-width:1024px)]:w-[99.9vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px] "
+          className="w-full h-[220px]  rounded-[10px] sm:h-[250px]  [@media(max-width:1024px)]:w-[97vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px] "
           alt="offer"
         />
         <img
           src={img4}
-          className="w-full h-[220px]   rounded-[10px] sm:h-[250px]   [@media(max-width:1024px)]:w-[99.9vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px] "
+          className="w-full h-[220px]   rounded-[10px] sm:h-[250px]   [@media(max-width:1024px)]:w-[97vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px] "
           alt="offer"
         />
         <img
           src={img5}
-          className="w-full h-[220px]   rounded-[10px] sm:h-[250px]  [@media(max-width:1024px)]:w-[99.9vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px]  "
+          className="w-full h-[220px]   rounded-[10px] sm:h-[250px]  [@media(max-width:1024px)]:w-[97vw] [@media(max-width:800px)]:!w-[200px]  [@media(max-width:800px)]:h-[145px]  "
           alt="offer"
         />
       </Slider>

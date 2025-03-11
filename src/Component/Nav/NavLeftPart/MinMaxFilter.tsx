@@ -37,13 +37,13 @@ export default function MinMaxFilter() {
           </button>
         ))}
       </div>
-      <div className="flex gap-2 items-center pt-[20px]">
+      <div className="flex gap-2 items-center pt-[20px] pr-[10px]">
         <input
           type="number"
           value={minPrice ?? ""}
           placeholder="Սկսած"
           onChange={handleMinPriceChange}
-          className="w-[120px] h-[42px] border rounded-[5px] pl-[10px] text-[14px] border-[#d8d9dc] text-[#a9a3af]"
+          className="w-[110px] h-[42px] border rounded-[5px] pl-[10px]  text-[14px] border-[#d8d9dc] text-[#a9a3af]"
           min="0"
         />
         -
@@ -52,7 +52,7 @@ export default function MinMaxFilter() {
           value={maxPrice ?? ""}
           placeholder="Մինչև"
           onChange={handleMaxPriceChange}
-          className="w-[120px] h-[42px] border rounded-[5px] pl-[10px] text-[14px] border-[#d8d9dc] text-[#a9a3af]"
+          className="w-[110px] h-[42px] border rounded-[5px] pl-[10px] text-[14px] border-[#d8d9dc] text-[#a9a3af]"
           min="0"
         />
       </div>

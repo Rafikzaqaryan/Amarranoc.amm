@@ -111,8 +111,8 @@ export default function Choose({ setClickedChoose }: ChooseProps) {
 
   return (
     <div className="flex justify-center">
-      <div className="w-[1075px] [@media(max-width:1280px)]:w-[100vw] relative">
-        <div className="h-[100px] w-[70vw] [@media(max-width:1300px)]:w-[94vw]  ">
+      <div className="w-[1075px] [@media(max-width:1300px)]:w-[100vw] relative">
+        <div className="h-[100px] w-[70vw] [@media(max-width:1300px)]:w-[100vw]  ">
           <Slider {...settings}>
             {options.map(({ label, value, img }) => (
               <div

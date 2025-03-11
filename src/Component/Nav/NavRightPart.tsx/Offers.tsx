@@ -150,16 +150,16 @@ export default function Offers() {
 
   return (
     <div>
-      <div className="pt-[30px] pl-[50px] pr-[40px]  [@media(max-width:1300px)]:pl-[80px]">
+      <div className="pt-[30px] pl-[50px] pr-[40px]  [@media(max-width:1300px)]:pl-[0px]">
         <Choose setClickedChoose={setClickedChoose} />
       </div>
 
-      <h2 className="text-xl font-bold mt-[10px] pl-[40px] w-[300px] [@media(max-width:1024px)]:pl-[80px]  [@media(max-width:768px)]:text-[15px]">
+      <h2 className="text-xl font-bold mt-[10px]  w-[400px] [@media(max-width:1300px)]:pl-[40px]  [@media(max-width:768px)]:text-[15px]">
         Լավագույն առաջարկներ
       </h2>
 
       {/* <div className="grid grid-cols-3 ml-[40px] [@media(max-width:1025px)]:grid-cols-1 mr-[10px] mt-5"> */}
-      <div className="flex flex-wrap gap-[10px]   [@media(max-width:1024px)]:justify-center ">
+      <div className="flex flex-wrap gap-[10px] [@media(max-width:1025px)]:pl-[20px]   [@media(max-width:1300px)]:justify-center ">
         {loading ? (
           <p>Loading...</p>
         ) : paginatedBestOffers.length ? (
@@ -182,10 +182,10 @@ export default function Offers() {
         )}
       </div>
 
-      <h2 className="sm: text-xl font-bold mt-[60px] pl-[40px] w-[380px] [@media(max-width:1300px)]:pl-[70px] [@media(max-width:768px)]:text-[15px]">
+      <h2 className="sm: text-xl font-bold mt-[60px] w-[380px] [@media(max-width:1300px)]:pl-[40px] [@media(max-width:768px)]:text-[15px]">
         Սովորական առաջարկներ
       </h2>
-      <div className="flex flex-wrap gap-[10px]   [@media(max-width:1024px)]:justify-center ">
+      <div className="flex flex-wrap gap-[10px]   [@media(max-width:1300px)]:justify-center ">
         {loading ? (
           <p>Loading...</p>
         ) : paginatedCommonOffers.length ? (
